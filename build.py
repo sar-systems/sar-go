@@ -78,6 +78,6 @@ open("tlv/index.html", "w").write(page(
     [ONE, DECK]))
 open("invest/index.html", "w").write(page(
     "SAR System — Investors", "For investors",
-    f'<a class="cta2" href="mailto:{MAIL}?subject=SAR%20System%20%E2%80%94%20Investor%20deck%20request">Ask for the investor deck</a>',
+    '<a class="cta2" href="https://wa.me/972584441005?text=Hi%20Sharon%2C%20could%20you%20send%20me%20the%20SAR%20System%20investor%20deck%3F">Ask for the investor deck</a>',
     [ONE]))
 print("built")
