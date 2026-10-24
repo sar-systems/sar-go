@@ -14,7 +14,7 @@ def icon(k): return f'<svg viewBox="0 0 24 24" aria-hidden="true">{ICONS[k]}</sv
 
 def page(title, eyebrow, primary2, docs):
     doc_rows = "".join(
-        f'<a class="doc" href="../docs/{f}"><span class="pdf">PDF</span><span class="dt">{n}</span><span class="dm">{m}</span></a>'
+        f'<a class="doc" href="../docs/{f}" target="_blank" rel="noopener"><span class="pdf">PDF</span><span class="dt">{n}</span><span class="dm">{m}</span></a>'
         for n, m, f in docs)
     return f'''<!doctype html>
 <html lang="en">
@@ -43,13 +43,13 @@ def page(title, eyebrow, primary2, docs):
     </div>
     <nav class="acts">
       <a href="tel:+972584441005">{icon("call")}<span>Call</span></a>
-      <a href="{WA}">{icon("wa")}<span>WhatsApp</span></a>
+      <a href="{WA}" target="_blank" rel="noopener">{icon("wa")}<span>WhatsApp</span></a>
       <a href="mailto:{MAIL}?subject=SAR%20System">{icon("mail")}<span>Email</span></a>
       <a href="../sharon-zerbib.vcf">{icon("add")}<span>Save</span></a>
     </nav>
   </section>
 
-  <a class="cta" href="{CAL}">Book a 30-minute call</a>
+  <a class="cta" href="{CAL}" target="_blank" rel="noopener">Book a 30-minute call</a>
   {primary2}
 
   <section class="block">
@@ -59,8 +59,8 @@ def page(title, eyebrow, primary2, docs):
 
   <section class="block">
     <h2>Team</h2>
-    <a class="row" href="{LJ}"><span>Léa-Jane Krief</span><span class="rm">CEO · LinkedIn</span></a>
-    <a class="row" href="https://sar-system.com"><span>sar-system.com</span><span class="rm">Website</span></a>
+    <a class="row" href="{LJ}" target="_blank" rel="noopener"><span>Léa-Jane Krief</span><span class="rm">CEO · LinkedIn</span></a>
+    <a class="row" href="https://sar-system.com/?lang=en" target="_blank" rel="noopener"><span>sar-system.com</span><span class="rm">Website</span></a>
   </section>
 
   <footer>© SAR System</footer>
@@ -78,6 +78,6 @@ open("tlv/index.html", "w").write(page(
     [ONE, DECK]))
 open("invest/index.html", "w").write(page(
     "SAR System — Investors", "For investors",
-    '<a class="cta2" href="https://wa.me/972584441005?text=Hi%20Sharon%2C%20could%20you%20send%20me%20the%20SAR%20System%20investor%20deck%3F">Ask for the investor deck</a>',
+    '<a class="cta2" target="_blank" rel="noopener" href="https://wa.me/972584441005?text=Hi%20Sharon%2C%20could%20you%20send%20me%20the%20SAR%20System%20investor%20deck%3F">Ask for the investor deck</a>',
     [ONE]))
 print("built")
