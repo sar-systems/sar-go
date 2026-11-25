@@ -1,7 +1,7 @@
 """Builds tlv/index.html and invest/index.html from one template (run from the repo root)."""
-WA = "https://wa.me/972584441005?text=Hi%20Sharon%2C%20we%20met%20at%20the%20Tel%20Aviv%20defense%20salon"
+WA = "https://wa.me/972584441005?text=Hi%20Sharon%2C%20we%20met%20at%20DefenseTech%20Week"
 CAL = "https://calendly.com/sharon-sarsystem/30min"
-MAIL = "sharon.sarsystem@gmail.com"
+MAIL = "sharonzerbib@sar-system.com"
 LJ = "https://www.linkedin.com/in/l%C3%A9a-jane-krief-2a06301b6/"
 
 ICONS = {
@@ -34,7 +34,7 @@ def page(title, eyebrow, primary2, docs):
 
   <section class="me">
     <div class="who">
-      <div class="avatar" aria-hidden="true">SZ</div>
+      <img class="avatar" src="../assets/sharon-zerbib-v2-2026-11-24.jpg" alt="Sharon Zerbib" width="64" height="64">
       <div><div class="name">Sharon Zerbib</div><div class="role">Co-founder &amp; CTO</div></div>
     </div>
     <div class="lines">
@@ -69,7 +69,7 @@ def page(title, eyebrow, primary2, docs):
 </html>
 '''
 
-ONE = ("One-pager", "1 page", "SAR-one-pager-public-v7-2026-10-23.pdf")
+ONE = ("One-pager", "1 page", "SAR-one-pager-public-v8-2026-11-24.pdf")
 DECK = ("Introduction deck", "10 slides", "SAR_System_Introduction_v3_2026-10-23.pdf")
 
 open("tlv/index.html", "w").write(page(
